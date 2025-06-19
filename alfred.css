@@ -1,0 +1,252 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-image: url('Isagi_animation-removebg-preview.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: 20%;
+    background-attachment: fixed;
+    color: #1a1a1a;
+}
+
+h1 {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid #991b1b;
+  white-space: nowrap;
+  letter-spacing: 0.1em;
+  animation: typing 5s steps(16, end) 5, blink-caret 0.75s step-end infinite;
+  font-family: 'Metal Mania', cursive, Arial, sans-serif;
+  font-size: 24px;
+  color: #000000;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 16ch }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #000 }
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #991b1b; 
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 16px 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #fca5a5;
+}
+
+
+section, #Home, #About, #projects, #contacts {
+  min-height: 100vh;
+  padding: 100px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  scroll-margin-top: 80px;
+}
+
+
+#Home {
+  background: #fee2e2;
+  text-align: center;
+}
+
+#Home h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #b91c1c;
+}
+
+#picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+#About {
+  background-color: #ffffff;
+  max-width: 800px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(153, 27, 27, 0.08);
+  padding: 40px;
+}
+
+#About h3 {
+  font-size: 24px;
+  color: #b91c1c;
+  margin-bottom: 16px;
+}
+
+#About p {
+  font-size: 17px;
+  color: #444;
+  text-align: center;
+}
+
+#projects {
+  background-color: #fef2f2;
+  flex-direction: column;
+}
+
+#projects h2 {
+  font-size: 28px;
+  color: #7f1d1d;
+  margin-bottom: 24px;
+}
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.project-card {
+  background: #000000;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 14px;
+}
+
+.project-card h3 {
+  font-size: 20px;
+  color: #dc2626;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 15px;
+  color: #444;
+}
+
+#contacts {
+  background: #fff;
+  flex-direction: column;
+}
+
+#contacts h2 {
+  font-size: 26px;
+  color: #7f1d1d;
+  margin-bottom: 24px;
+}
+
+#contacts ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+#contacts li {
+  margin-bottom: 18px;
+  font-size: 18px;
+}
+
+#contacts a {
+  color: #b91c1c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#contacts a:hover {
+  color: #7f1d1d;
+}
+
+#contacts i {
+  margin-right: 8px;
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  #Home h1 {
+    font-size: 32px;
+  }
+
+  .projects-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+}
+#Home {
+
+  background: transparent;
+}
+
+#About {
+  background: transparent;
+  box-shadow: none;
+}
+
+#projects {
+  background: transparent;
+}
+
+#contacts {
+  background: transparent;
+  box-shadow: none;
+}
+#contacts ul {
+  padding: 0;
+}
